@@ -1,0 +1,193 @@
+getgenv().VxezeKaitun = {
+    -- Master
+    Enabled = true,
+
+    -- Automation
+    AutoBuySeeds = true,
+    AutoBuyGears = false,
+    AutoPlant = true,
+    AutoCollectFruit = true,
+    AutoSellFruit = true,
+    AutoCollectSeedPack = true,
+    AutoExpandGarden = true,
+    AutoBuyPets = true,
+    AutoEquipPets = true,
+    AutoBuyPetSlots = true,
+    AutoPlay = true,
+    AutoMail = false,
+
+    -- FPS Boost
+    FpsBoost = true,
+
+    -- SeedPack
+    CollectGoldSeed = true,
+    CollectRainbowSeed = true,
+    PlantGoldSeed = false,
+    PlantRainbowSeed = false,
+
+    -- Flow
+    GearPriority = "AfterPlant", -- AfterPlant or BeforePlant
+    StockpileSeeds = true,
+    SellWhenInventoryFull = true,
+    InventorySellBuffer = 1,
+    SellThreshold = 1,
+    FullInventorySellRetries = 5,
+    FullInventoryRetryDelay = 0.12,
+    MinShecklesToSpend = 0,
+
+    -- Mail
+    MailRecipientUsername = "",
+    MailRecipientUserId = 0,
+    MailNote = "auto gift from vxezehub",
+    MailPets = false,
+    MailFruits = false,
+    MailSeeds = false,
+    MailGears = false,
+    MailMinPetPrice = 0,
+    MailIntervalSec = 30,
+    MailMaxItemsPerBatch = 20,
+
+    -- Delays
+    BuyDelay = 0.1,
+    PlantDelay = 0.3,
+    CollectDelay = 0.08,
+    SellDelay = 0.1,
+    IdleDelay = 0.35,
+    LoopDelay = 0.08,
+
+    -- Limits per coordinator cycle
+    MaxSeedBuysPerCycle = 200,
+    MaxGearBuysPerCycle = 3,
+    MaxPlantPerCycle = 30,
+    MaxCollectPerCycle = 40,
+    MaxSellPerCycle = 30,
+    MaxPetBuysPerCycle = 2,
+    MaxPetEquipsPerCycle = 3,
+
+    -- Plant movement
+    PlantYOffset = 3.5,
+    PlantTweenSpeed = 50,
+    PlantOccupiedSpacing = 2.0,
+
+    -- Pets
+    PetBuyMinSheckles = 0,
+    PetBuyTeleportOffset = Vector3.new(0, 2.5, 4),
+    PetEnabled = {
+        All = false,
+        Frog = false,
+        Bunny = false,
+        Deer = false,
+        Owl = false,
+        Robin = true,
+        Bee = true,
+        Unicorn = true,
+        Monkey = true,
+        GoldenDragonfly = true,
+        ["Golden Dragonfly"] = true,
+        Raccoon = true,
+        BlackDragon = true,
+        ["Black Dragon"] = true,
+        IceSerpent = true,
+        ["Ice Serpent"] = true,
+    },
+
+    -- Buy Seed Whitelist
+    BuySeedEnabled = {
+        All = false,
+        Carrot = true,
+        Strawberry = true,
+        Blueberry = true,
+        Tulip = true,
+        Tomato = true,
+        Apple = true,
+        Bamboo = true,
+        Corn = true,
+        Cactus = true,
+        Pineapple = true,
+        Mushroom = true,
+        ["Green Bean"] = true,
+        Banana = true,
+        Grape = true,
+        Coconut = true,
+        Mango = true,
+        ["Dragon Fruit"] = true,
+        Acorn = true,
+        Cherry = true,
+        Sunflower = true,
+        ["Venus Fly Trap"] = true,
+        Pomegranate = true,
+        ["Poison Apple"] = true,
+        ["Moon Bloom"] = true,
+        ["Dragon's Breath"] = true,
+        ["Ghost Pepper"] = true,
+        ["Poison Ivy"] = true,
+        ["Baby Cactus"] = true,
+        ["Glow Mushroom"] = true,
+        Romanesco = true,
+        ["Horned Melon"] = true,
+    },
+
+    -- Plant Seed Whitelist
+    PlantSeedEnabled = {
+        All = false,
+        Carrot = true,
+        Strawberry = true,
+        Blueberry = true,
+        Tulip = true,
+        Tomato = true,
+        Apple = true,
+        Bamboo = true,
+        Corn = true,
+        Cactus = true,
+        Pineapple = true,
+        Mushroom = true,
+        ["Green Bean"] = true,
+        Banana = true,
+        Grape = true,
+        Coconut = true,
+        Mango = true,
+        ["Dragon Fruit"] = true,
+        Acorn = true,
+        Cherry = true,
+        Sunflower = true,
+        ["Venus Fly Trap"] = true,
+        Pomegranate = true,
+        ["Poison Apple"] = true,
+        ["Moon Bloom"] = true,
+        ["Dragon's Breath"] = true,
+        ["Ghost Pepper"] = true,
+        ["Poison Ivy"] = true,
+        ["Baby Cactus"] = true,
+        ["Glow Mushroom"] = true,
+        Romanesco = true,
+        ["Horned Melon"] = true,
+    },
+
+    GearEnabled = {
+        All = false,
+        ["Common Watering Can"] = false,
+        ["Common Sprinkler"] = false,
+        Sign = false,
+        Lantern = false,
+        Trowel = false,
+        ["Speed Mushroom"] = false,
+        ["Jump Mushroom"] = false,
+        Gnome = false,
+        ["Shrink Mushroom"] = false,
+        ["Supersize Mushroom"] = false,
+        ["Invisibility Mushroom"] = false,
+        Wheelbarrow = false,
+        Teleporter = false,
+        ["Super Watering Can"] = false,
+        ["Basic Pot"] = false,
+        Flashbang = false,
+    },
+
+    FruitEnabled = {
+        All = true,
+    },
+}
+
+if not getgenv().VxezeKaitunRunning then
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/angeryy-tvy/e284f6d9b679f604c1eab3c30ad0d51f/raw/GAG2-Kaitun-Vxeze"))()
+end
