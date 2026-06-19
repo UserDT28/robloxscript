@@ -42,9 +42,6 @@ getgenv().Config = {
         ["Seed"] = {
             ["Rainbow"] = true,
             ["Gold"]    = true,
-            ["Bamboo"]  = true,
-            ["Dragon's Breath"] = true,
-            ["Moon Bloom"]      = true,
         },
     },
     ["Plant Seed"] = {
@@ -97,7 +94,7 @@ getgenv().Config = {
 
     ["Webhook"] = {
         ["Enable"]            = true,
-        ["URL"]               = "",      -- https://discord.com/api/webhooks/...
+        ["URL"]               = "https://discord.com/api/webhooks/1516788094953852968/H9_9aS7BothKz_u9gQqpRLQlOt-4JTHkpjcm6VHaqKmkBOVljTLvy_60zsV0pxmXSewm",      -- https://discord.com/api/webhooks/...
         ["Username"]          = "DucTien",
         ["OnRarePet"]         = true,    -- ping when a rare pet is tamed
         ["OnRareSeed"]        = true,    -- ping when Rainbow/Gold seed claimed
