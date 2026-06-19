@@ -1,193 +1,121 @@
-getgenv().VxezeKaitun = {
-    -- Master
-    Enabled = true,
 
-    -- Automation
-    AutoBuySeeds = true,
-    AutoBuyGears = false,
-    AutoPlant = true,
-    AutoCollectFruit = true,
-    AutoSellFruit = true,
-    AutoCollectSeedPack = true,
-    AutoExpandGarden = true,
-    AutoBuyPets = true,
-    AutoEquipPets = true,
-    AutoBuyPetSlots = true,
-    AutoPlay = true,
-    AutoMail = false,
 
-    -- FPS Boost
-    FpsBoost = true,
-
-    -- SeedPack
-    CollectGoldSeed = true,
-    CollectRainbowSeed = true,
-    PlantGoldSeed = false,
-    PlantRainbowSeed = false,
-
-    -- Flow
-    GearPriority = "AfterPlant", -- AfterPlant or BeforePlant
-    StockpileSeeds = true,
-    SellWhenInventoryFull = true,
-    InventorySellBuffer = 1,
-    SellThreshold = 1,
-    FullInventorySellRetries = 5,
-    FullInventoryRetryDelay = 0.12,
-    MinShecklesToSpend = 0,
-
-    -- Mail
-    MailRecipientUsername = "",
-    MailRecipientUserId = 0,
-    MailNote = "auto gift from vxezehub",
-    MailPets = false,
-    MailFruits = false,
-    MailSeeds = false,
-    MailGears = false,
-    MailMinPetPrice = 0,
-    MailIntervalSec = 30,
-    MailMaxItemsPerBatch = 20,
-
-    -- Delays
-    BuyDelay = 0.1,
-    PlantDelay = 0.3,
-    CollectDelay = 0.08,
-    SellDelay = 0.1,
-    IdleDelay = 0.35,
-    LoopDelay = 0.08,
-
-    -- Limits per coordinator cycle
-    MaxSeedBuysPerCycle = 200,
-    MaxGearBuysPerCycle = 3,
-    MaxPlantPerCycle = 30,
-    MaxCollectPerCycle = 40,
-    MaxSellPerCycle = 30,
-    MaxPetBuysPerCycle = 2,
-    MaxPetEquipsPerCycle = 3,
-
-    -- Plant movement
-    PlantYOffset = 3.5,
-    PlantTweenSpeed = 50,
-    PlantOccupiedSpacing = 2.0,
-
-    -- Pets
-    PetBuyMinSheckles = 0,
-    PetBuyTeleportOffset = Vector3.new(0, 2.5, 4),
-    PetEnabled = {
-        All = false,
-        Frog = false,
-        Bunny = false,
-        Deer = false,
-        Owl = false,
-        Robin = true,
-        Bee = true,
-        Unicorn = true,
-        Monkey = true,
-        GoldenDragonfly = true,
-        ["Golden Dragonfly"] = true,
-        Raccoon = true,
-        BlackDragon = true,
-        ["Black Dragon"] = true,
-        IceSerpent = true,
-        ["Ice Serpent"] = true,
+getgenv().Config = {
+    ["Pet"] = {
+        ["Auto Buy"] = {
+            ["Enable"] = true,
+            ["Pet"] = {
+                ["IceSerpent"]      = true,   -- $20M
+                ["Raccoon"]         = true,   -- $5M
+                ["Unicorn"]         = true,   -- $4M
+                ["GoldenDragonfly"] = true,   -- $3M
+                ["BlackDragon"]     = true,   -- $1M
+                ["Monkey"]          = true,   -- $1M
+                ["Bee"]             = true,   -- $1M
+                ["Robin"]           = true,   -- $75K
+                ["Deer"]            = false,  -- $50K
+                ["Owl"]             = false,  -- $25K
+                ["Bunny"]           = false,  -- $20K
+                ["Frog"]            = false,  -- $10K
+            },
+        },
+    },
+    ["Mail"] = {
+        ["Enable"]      = false,
+        ["Username"]    = "ductien1702",
+        ["Note"]        = "auto-shipped from main",
+        ["IntervalSec"] = 30,
+        ["Pet"] = {
+            ["IceSerpent"]      = true,
+            ["Raccoon"]         = true,
+            ["Unicorn"]         = true,
+            ["GoldenDragonfly"] = true,
+            ["BlackDragon"]     = true,
+            ["Monkey"]          = true,
+            ["Bee"]             = true,
+            ["Robin"]           = true,
+            ["Deer"]            = false,
+            ["Owl"]             = false,
+            ["Bunny"]           = false,
+            ["Frog"]            = false,
+        },
+        ["Seed"] = {
+            ["Rainbow"] = true,
+            ["Gold"]    = true,
+            ["Bamboo"]  = true,
+            ["Dragon's Breath"] = true,
+            ["Moon Bloom"]      = true,
+        },
+    },
+    ["Plant Seed"] = {
+        ["Enable"] = true,
+        ["Seed"] = {
+            ["Bamboo"]          = false,   -- $10
+            ["Blueberry"]       = true,   -- $25
+            ["Tulip"]           = true,   -- $40
+            ["Apple"]           = true,   -- $50
+            ["Tomato"]          = true,   -- $200
+            ["Banana"]          = true,   -- $1K
+            ["Sunflower"]       = true,   -- $1K
+            ["Corn"]            = true,   -- $2.5K
+            ["Mushroom"]        = false,   -- $15K
+            ["Cherry"]          = true,   -- $30K
+            ["Mango"]           = true,   -- $35K
+            ["Grape"]           = true,   -- $50K
+            ["Coconut"]         = true,   -- $70K
+            ["Cactus"]          = true,   -- $100K
+            ["Baby Cactus"]     = true,   -- $100K
+            ["Pomegranate"]     = true,   -- $200K
+            ["Pineapple"]       = true,   -- $250K
+            ["Dragon Fruit"]    = true,   -- $500K
+            ["Poison Apple"]    = false,   -- $1M
+            ["Moon Bloom"]      = false,   -- $1M
+            ["Poison Ivy"]      = false,   -- $1M
+            ["Ghost Pepper"]    = false,   -- $1M
+            ["Venus Fly Trap"]  = false,   -- $5M
+            ["Dragon's Breath"] = false,   -- $10M
+        },
+    },
+    ["Buy Gear"] = {
+        ["Enable"] = false,
+        ["Gear"] = {
+            ["Common Watering Can"]  = true,   -- $2K
+            ["Super Watering Can"]   = true,   -- $250K
+            ["Common Sprinkler"]     = true,   -- $3K
+            ["Uncommon Sprinkler"]   = true,   -- $10K
+            ["Rare Sprinkler"]       = true,   -- $50K
+            ["Legendary Sprinkler"]  = true,   -- $100K
+            ["Super Sprinkler"]      = true,   -- $300K
+        },
+    },
+    ["Auto Water"] = {
+        ["Enable"] = false,
+    },
+    ["Auto Sprinkler"] = {
+        ["Enable"] = false,
     },
 
-    -- Buy Seed Whitelist
-    BuySeedEnabled = {
-        All = false,
-        Carrot = true,
-        Strawberry = true,
-        Blueberry = true,
-        Tulip = true,
-        Tomato = true,
-        Apple = true,
-        Bamboo = true,
-        Corn = true,
-        Cactus = true,
-        Pineapple = true,
-        Mushroom = true,
-        ["Green Bean"] = true,
-        Banana = true,
-        Grape = true,
-        Coconut = true,
-        Mango = true,
-        ["Dragon Fruit"] = true,
-        Acorn = true,
-        Cherry = true,
-        Sunflower = true,
-        ["Venus Fly Trap"] = true,
-        Pomegranate = true,
-        ["Poison Apple"] = true,
-        ["Moon Bloom"] = true,
-        ["Dragon's Breath"] = true,
-        ["Ghost Pepper"] = true,
-        ["Poison Ivy"] = true,
-        ["Baby Cactus"] = true,
-        ["Glow Mushroom"] = true,
-        Romanesco = true,
-        ["Horned Melon"] = true,
-    },
-
-    -- Plant Seed Whitelist
-    PlantSeedEnabled = {
-        All = false,
-        Carrot = true,
-        Strawberry = true,
-        Blueberry = true,
-        Tulip = true,
-        Tomato = true,
-        Apple = true,
-        Bamboo = true,
-        Corn = true,
-        Cactus = true,
-        Pineapple = true,
-        Mushroom = true,
-        ["Green Bean"] = true,
-        Banana = true,
-        Grape = true,
-        Coconut = true,
-        Mango = true,
-        ["Dragon Fruit"] = true,
-        Acorn = true,
-        Cherry = true,
-        Sunflower = true,
-        ["Venus Fly Trap"] = true,
-        Pomegranate = true,
-        ["Poison Apple"] = true,
-        ["Moon Bloom"] = true,
-        ["Dragon's Breath"] = true,
-        ["Ghost Pepper"] = true,
-        ["Poison Ivy"] = true,
-        ["Baby Cactus"] = true,
-        ["Glow Mushroom"] = true,
-        Romanesco = true,
-        ["Horned Melon"] = true,
-    },
-
-    GearEnabled = {
-        All = false,
-        ["Common Watering Can"] = false,
-        ["Common Sprinkler"] = false,
-        Sign = false,
-        Lantern = false,
-        Trowel = false,
-        ["Speed Mushroom"] = false,
-        ["Jump Mushroom"] = false,
-        Gnome = false,
-        ["Shrink Mushroom"] = false,
-        ["Supersize Mushroom"] = false,
-        ["Invisibility Mushroom"] = false,
-        Wheelbarrow = false,
-        Teleporter = false,
-        ["Super Watering Can"] = false,
-        ["Basic Pot"] = false,
-        Flashbang = false,
-    },
-
-    FruitEnabled = {
-        All = true,
+    ["Webhook"] = {
+        ["Enable"]            = true,
+        ["URL"]               = "",      -- https://discord.com/api/webhooks/...
+        ["Username"]          = "DucTien",
+        ["OnRarePet"]         = true,    -- ping when a rare pet is tamed
+        ["OnRareSeed"]        = true,    -- ping when Rainbow/Gold seed claimed
+        ["PetMinPrice"]       = 0,       -- only notify pets with BasePrice >= this
+        ["PetRarity"] = {                -- which rarities trigger pet notify
+            ["Common"]    = false,
+            ["Uncommon"]  = false,
+            ["Rare"]      = false,
+            ["Legendary"] = true,
+            ["Mythic"]    = true,
+            ["Super"]     = true,
+            ["Divine"]    = true,
+            ["Prismatic"] = true,
+        },
+        ["ProfileReport"]     = true,   -- send periodic profile summary
+        ["ProfileIntervalMin"]= 30,      -- minutes between profile reports
     },
 }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/OneclickGAG2.lua"))()
 
-if not getgenv().VxezeKaitunRunning then
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/angeryy-tvy/e284f6d9b679f604c1eab3c30ad0d51f/raw/GAG2-Kaitun-Vxeze"))()
-end
+_G.Config={UserID="103c2e51-f4f2-49f6-aa4d-2ce5796ba816",discord_id="1095689756626657291",Note="BananaCatHub"}local s;for i=1,5 do s=pcall(function()loadstring(game:HttpGet("https://cdn.yummydata.click/scripts/gag2"))()end)if s then break end wait(5)end
